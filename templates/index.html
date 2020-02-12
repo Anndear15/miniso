@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+
+  <h1>{% block title %}index me{% endblock %}</h1>
+
+
+{% block content %}
+    <h1>welcome to  my about page</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Accusamus adipisci, consequuntur ea earum exercitationem facilis, fugit
+      laborum magnam odit porro, possimus quam quisquam rerum soluta sunt ullam veniam veritatis voluptatum?</p>
+
+    <div id="chart">
+      <embed type="image/svg+xml" src= {{ pieData|safe }} />
+    </div>
+
+    <div id="chart">
+      <embed type="image/svg+xml" src= {{ wamuyu|safe }} />
+    </div>
+
+    <div id="chart">
+      <embed type="image/svg+xml" src= {{ job|safe }} />
+    </div>
+{% endblock %}
