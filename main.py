@@ -43,7 +43,7 @@ app = Flask(__name__)
 @app.route('/index')
 def index ():
     conn =psycopg2.connect("dbname='dfpt804vm2lelc' user='peprvwthwbfhfd' host='c2-54-195-247-108.eu-west-1.compute.amazonaws.com'")
-    cur =conn.cursor("""SELECT to_char(sales.created_at,'Month')as months,SUM(sales.quantity)as total_sales FROM public.sales GROUP BY months ORDER BY months""")
+    # cur =conn.cursor("""SELECT to_char(sales.created_at,'Month')as months,SUM(sales.quantity)as total_sales FROM public.sales GROUP BY months ORDER BY months""")
 
     data = [('January',1),
             ('February',11),
